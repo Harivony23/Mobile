@@ -1,0 +1,27 @@
+.list-container {
+  padding: 8px;
+}
+
+.item-card {
+  margin: 0 0 16px 0;
+  /* styles from global.scss applied here automatically but we can refine */
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+
+  h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 4px 0 0;
+    color: var(--ion-color-medium);
+    font-size: 0.9rem;
+  }
+}

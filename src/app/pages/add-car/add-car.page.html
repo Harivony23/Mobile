@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ajouter voiture</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item><ion-input placeholder="Marque" [(ngModel)]="car.marque"></ion-input></ion-item>
+  <ion-item><ion-input placeholder="Modèle" [(ngModel)]="car.modele"></ion-input></ion-item>
+  <ion-item><ion-input placeholder="Immatriculation" [(ngModel)]="car.immatriculation"></ion-input></ion-item>
+  <ion-item><ion-input type="number" placeholder="Année" [(ngModel)]="car.annee"></ion-input></ion-item>
+
+  <ion-button expand="block" (click)="save()">Enregistrer</ion-button>
+</ion-content>

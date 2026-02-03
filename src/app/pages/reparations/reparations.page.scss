@@ -1,0 +1,36 @@
+.list-container {
+  padding: 8px;
+}
+
+.item-card {
+  margin: 0 0 16px 0;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+
+  h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+
+.date {
+  color: var(--ion-color-medium);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.cost {
+  font-size: 1.1rem;
+  color: var(--ion-color-dark);
+  margin-bottom: 12px;
+}
+
+.actions {
+  margin-top: 16px;
+}

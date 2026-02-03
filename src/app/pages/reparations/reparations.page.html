@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mes Réparations</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="list-container">
+    <ion-card *ngFor="let repair of repairs" class="item-card">
+      <ion-card-content>
+        <div class="card-header">
+          <div class="header-top">
+            <ion-badge [color]="getStatusColor(repair.status)">
+              {{ getStatusLabel(repair.status) }}
+            </ion-badge>
+            <span class="car-name">{{ repair.carName }}</span>
+          </div>
+
+          <h2>{{ repair.interventionName | slice:0:30 }}...</h2>
+        </div>
+
+        <p class="date">{{ repair.createdAt | date:'mediumDate' }}</p>
+
+        <p class="cost">
+          Coût : <strong>{{ repair.price | number }} Ar</strong>
+        </p>
+
+        <div class="actions" *ngIf="repair.status === 'accepted'">
+          <ion-button
+            expand="block"
+            color="success"
+            routerLink="/payment/{{ repair.id }}"
+          >
+            Payer maintenant
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/repair-request">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

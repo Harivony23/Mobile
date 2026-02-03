@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Paiement</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="payment-container">
+    <div class="icon-area">
+      <ion-icon name="card-outline"></ion-icon>
+    </div>
+    <h1>Paiement Sécurisé</h1>
+    <p>Vous êtes sur le point de régler votre réparation.</p>
+    
+    <ion-card class="summary-card">
+      <ion-card-content>
+        <p>Montant à payer</p>
+        <h2>--- €</h2> 
+        <!-- Ideally we pass amount to this page -->
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button expand="block" shape="round" color="success" (click)="pay()" class="pay-btn">
+      Confirmer le paiement
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Voitures</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/add-car">➕</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="list-container">
+    <ion-card *ngFor="let car of cars" class="item-card">
+      <ion-card-content>
+        <div class="card-header">
+          <div>
+            <h2>{{ car.marque }} {{ car.modele }}</h2>
+            <p>{{ car.immatriculation }} • {{ car.annee }}</p>
+          </div>
+          <ion-button fill="clear" color="danger" (click)="deleteCar(car.id)">
+            <ion-icon name="trash-outline" slot="icon-only"></ion-icon>
+          </ion-button>
+        </div>
+        <ion-button fill="outline" expand="block" size="small" routerLink="/edit-car/{{car.id}}">
+          Modifier
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Modifier voiture</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item><ion-input placeholder="Marque" [(ngModel)]="car.marque"></ion-input></ion-item>
+  <ion-item><ion-input placeholder="Modèle" [(ngModel)]="car.modele"></ion-input></ion-item>
+  <ion-item><ion-input placeholder="Immatriculation" [(ngModel)]="car.immatriculation"></ion-input></ion-item>
+  <ion-item><ion-input type="number" placeholder="Année" [(ngModel)]="car.annee"></ion-input></ion-item>
+
+  <ion-button expand="block" (click)="save()">Mettre à jour</ion-button>
+</ion-content>

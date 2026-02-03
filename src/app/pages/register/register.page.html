@@ -1,0 +1,28 @@
+<ion-content class="ion-padding">
+  <div class="auth-wrapper">
+    <div class="header-section">
+      <h1>Créer un compte</h1>
+      <p>Rejoignez-nous dès maintenant</p>
+    </div>
+
+    <div class="form-section">
+      <ion-item lines="none" class="input-item">
+        <ion-input placeholder="Nom complet" [(ngModel)]="name"></ion-input>
+      </ion-item>
+      <ion-item lines="none" class="input-item">
+        <ion-input placeholder="Email" type="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item lines="none" class="input-item">
+        <ion-input type="password" placeholder="Mot de passe" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="register()" class="main-button">
+        S'inscrire
+      </ion-button>
+      
+      <ion-button fill="clear" routerLink="/login" class="sub-button">
+        Déjà un compte ? Se connecter
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

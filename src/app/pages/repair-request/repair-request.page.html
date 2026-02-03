@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Demande de réparation</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Véhicule -->
+  <ion-item>
+    <ion-select
+      label="Véhicule"
+      placeholder="Choisir une voiture"
+      [(ngModel)]="selectedCarId">
+      <ion-select-option *ngFor="let car of cars" [value]="car.id">
+        {{ car.marque }} {{ car.modele }} ({{ car.immatriculation }})
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!-- Intervention -->
+  <ion-item>
+    <ion-select
+      label="Type d'intervention"
+      placeholder="Choisir une intervention"
+      [(ngModel)]="selectedInterventionId">
+      <ion-select-option
+        *ngFor="let i of interventions"
+        [value]="i.id">
+        {{ i.name }} – {{ i.price | number }} Ar
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button
+    expand="block"
+    (click)="submitRequest()"
+    [disabled]="!selectedCarId || !selectedInterventionId">
+    Envoyer la demande
+  </ion-button>
+
+</ion-content>

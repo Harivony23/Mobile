@@ -1,0 +1,37 @@
+<ion-content class="ion-padding" style="--background: var(--ion-color-light);">
+  
+  <div class="welcome-section">
+    <h1>Bonjour !</h1>
+    <p>Que souhaitez-vous faire aujourd'hui ?</p>
+  </div>
+
+  <div class="actions-grid">
+    <div class="action-card" routerLink="/cars">
+      <div class="icon-wrapper primary">
+        <span>🚗</span>
+      </div>
+      <h3>Mes Voitures</h3>
+    </div>
+
+    <div class="action-card" routerLink="/repair-request">
+      <div class="icon-wrapper secondary">
+        <span>🔧</span>
+      </div>
+      <h3>Réparer</h3>
+    </div>
+
+    <div class="action-card" routerLink="/reparations">
+      <div class="icon-wrapper tertiary">
+        <span>📋</span>
+      </div>
+      <h3>Suivi</h3>
+    </div>
+  </div>
+
+  <div class="logout-section">
+    <ion-button expand="block" fill="outline" color="medium" (click)="logout()">
+      Déconnexion
+    </ion-button>
+  </div>
+
+</ion-content>
